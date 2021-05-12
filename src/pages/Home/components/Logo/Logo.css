@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+video {
+    position:absolute;
+    top:15px;
+    left:50%;
+    transform:translateX(-50%);
+    width: 600px;
+    height: 600px
+}
+
+.intro {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform:translateX(-50%);
+    font-family: 'Lobster', cursive;
+    font-size: 36px
+}
+
+.button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width:100px;
+    transform:translateX(-50%);
+    border-radius: 15%;
+}

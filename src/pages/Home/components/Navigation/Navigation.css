@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Lobster', cursive;
+
+
+}
+.nav li {
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0 15px;
+}
+
+.nav li::after{
+    content: '/';
+    padding-left:23px;
+    font-size: 20px;
+}
