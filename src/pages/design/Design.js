@@ -3,17 +3,17 @@ import React, { useState } from 'react';
 import asanaData from '../../data/data';
 import AsanaCard from './card/Card';
 import Search from './search/Search';
-
+import './Design.css';
 function Design() {
 	const [data, setData] = useState(asanaData);
 
 	return (
 		<div className='container-fluid'>
-			<div className='row' style={{ height: '90vh' }}>
-				<div className='col' style={{ border: 'solid red' }}>
+			<div className='row'>
+				<div className='col'>
 					<Search data={data} setData={setData} />
 
-					<div>
+					<div className='flex'>
 						{data.map(item => (
 							<AsanaCard key={item.id} {...item} />
 						))}
