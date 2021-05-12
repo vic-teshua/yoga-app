@@ -1,24 +1,29 @@
-import Logo from "./pages/Home/components/Logo/Logo";
-import "./App.css";
-import Navigation from "./pages/Home/components/Navigation/Navigation";
-import Footer from "./pages/Home/components/Footer/Footer";
-<<<<<<< Updated upstream
+import Home from './pages/Home/Home'
+import './App.css';
+import Design from './pages/design/Design';
 import Contact from "./pages/Contact/ContactForm";
 
+import {Switch, Route, BrowserRouter as Router} from 'react-router-dom';
+import Navigation from './pages/Home/components/Navigation/Navigation';
 function App() {
   return (
-    <div className="App">
-      <Navigation />
-      <Logo />
-      <Footer />
-=======
-import Form from "./pages/Contact/ContactForm";
-function App() {
-  return (
-    <div className="App">
-      <Form />
->>>>>>> Stashed changes
-    </div>
+	  <Router>
+	  <Navigation />
+	  <Switch>
+	  <div className="App">
+	  <Route exact path="/">
+	  <Home />
+	  </Route>
+	  <Route exact path="/design">
+	  <Design />
+	  </Route>
+    <Route exact path="/contact">
+	  <Contact />
+	  </Route>
+	  
+	  </div>
+	  </Switch>
+	  </Router>
   );
 }
 
