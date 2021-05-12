@@ -8,7 +8,9 @@ function AsanaCard(props) {
 			<img src={image} className='card-img-top' alt='...' />
 			<div className='card-body'>
 				<p className='card-text'>{nameTranslated}</p>
-				<p className='badge bg-info'>{difficultyLevel}</p>
+				<p className={difficultyLevel === 'beginner' ? 'badge bg-success' : difficultyLevel === 'intermediate' ? 'badge bg-warning' : 'badge bg-danger'}>
+					{difficultyLevel}
+				</p>
 			</div>
 		</div>
 	);
