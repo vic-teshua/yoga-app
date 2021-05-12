@@ -1,14 +1,19 @@
-import Logo from './pages/Home/components/Logo/Logo'
+import Home from './pages/Home/Home'
 import './App.css';
-import Navigation from './pages/Home/components/Navigation/Navigation';
-import Footer from './pages/Home/components/Footer/Footer';
+
+import {Switch, Route, BrowserRouter as Router} from 'react-router-dom';
 function App() {
   return (
-    <div className="App">
-      <Navigation />
-     <Logo />
-     <Footer />
-    </div>
+	  <Router>
+	  <Switch>
+	  <div className="App">
+	  <Route exact path="/">
+	  <Home />
+	  </Route>
+	  
+	  </div>
+	  </Switch>
+	  </Router>
   );
 }
 
