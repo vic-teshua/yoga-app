@@ -1,20 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import data from '../../data/data';
+import asanaData from '../../data/data';
 import AsanaCard from './card/Card';
+import Search from './search/Search';
 
 function Design() {
-	console.log(data);
+	const [data, setData] = useState(asanaData);
+
 	return (
 		<div className='container-fluid'>
 			<div className='row' style={{ height: '90vh' }}>
 				<div className='col' style={{ border: 'solid red' }}>
-					<div>
-						<input type='text' placeholder='Search' />
-						<button>Search</button>
-					</div>
+					<Search data={data} setData={setData} />
 
-					<div>
+					<div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
 						{data.map(item => (
 							<AsanaCard key={item.id} {...item} />
 						))}
