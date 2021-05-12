@@ -7,9 +7,13 @@ function Search(props) {
 
 	function handleSubmit(e) {
 		e.preventDefault();
-
-		let newData = data.filter(item => item.nameTranslated.includes(searchedWord));
-		setData(newData);
+		if (searchedWord === 'beginner' || searchedWord === 'intermediate' || searchedWord === 'expert') {
+			let newData = data.filter(item => item.difficultyLevel === searchedWord);
+			setData(newData);
+		} else {
+			let newData = data.filter(item => item.nameTranslated.includes(searchedWord));
+			setData(newData);
+		}
 	}
 
 	return (

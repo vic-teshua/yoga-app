@@ -13,7 +13,7 @@ function Design() {
 				<div className='col' style={{ border: 'solid red' }}>
 					<Search data={data} setData={setData} />
 
-					<div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+					<div>
 						{data.map(item => (
 							<AsanaCard key={item.id} {...item} />
 						))}
