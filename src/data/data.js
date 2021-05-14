@@ -93,7 +93,7 @@ const poses = [
 		id: 5,
 		name: 'utthita parsvakonasana',
 		nameTranslated: 'extended side angle pose',
-		image: '/images/revolved-triangle-pose.png',
+		image: '/images/side-angle-pose.jpeg',
 		difficultyLevel: 'intermediate',
 		category: 'standing / twist',
 		description: [
@@ -324,25 +324,6 @@ const poses = [
 	},
 	{
 		id: 15,
-		name: 'chaturanga dandasana',
-		nameTranslated: 'four limbed staff pose',
-		image: '/images/locust-pose.jpg',
-		difficultyLevel: 'intermediate',
-		category: 'arm and leg support / balancing',
-		description: [
-			'from a prone position, the weight of the body is supported on the hands and the toes',
-			'the body is approximately 5 inches above and parallel to the earth',
-			'the abdomen is pulled up towards the spine',
-			'the pelvis is tucked',
-			'the palms are flat',
-			'the elbows are close to the side body and bent in a 90-degree angle and inline with the wrists',
-			'the toes are rooted into the earth as the heels push back',
-			'the gaze is down',
-		],
-		benefits: ['strengthens the arms and wrists', 'tones the abdomens'],
-	},
-	{
-		id: 16,
 		name: 'urdhva mukha svanasana',
 		nameTranslated: 'upward facing dog pose',
 		image: '/images/upward-dog-pose.jpg',
@@ -370,7 +351,7 @@ const poses = [
 		],
 	},
 	{
-		id: 17,
+		id: 16,
 		name: 'adho mukha svanasana',
 		nameTranslated: 'downward facing dog pose',
 		image: '/images/downward-dog-pose.jpg',
@@ -401,10 +382,10 @@ const poses = [
 		],
 	},
 	{
-		id: 18,
+		id: 17,
 		name: 'dandasana',
 		nameTranslated: 'staff pose',
-		image: '/images/downward-dog-pose.jpg',
+		image: '/images/staff-pose.jpg',
 		difficultyLevel: 'beginner',
 		category: 'seated / neutral',
 		description: [
@@ -423,7 +404,7 @@ const poses = [
 		benefits: ['strengthens the back muscles', 'stretches the shoulders and chest'],
 	},
 	{
-		id: 19,
+		id: 18,
 		name: 'paripurna navasana',
 		nameTranslated: 'full boat pose',
 		image: '/images/boat-pose.jpg',
@@ -444,7 +425,7 @@ const poses = [
 		],
 	},
 	{
-		id: 20,
+		id: 19,
 		name: 'virasana',
 		nameTranslated: 'hero pose',
 		image: '/images/hero-pose.jpg',
@@ -470,7 +451,7 @@ const poses = [
 		],
 	},
 	{
-		id: 21,
+		id: 20,
 		name: 'supta virasana',
 		nameTranslated: 'reclining hero pose',
 		image: '/images/reclining-hero-pose.jpg',
@@ -493,7 +474,7 @@ const poses = [
 		],
 	},
 	{
-		id: 22,
+		id: 21,
 		name: 'baddha konasana',
 		nameTranslated: 'bound angle pose',
 		image: '/images/bound-angle-pose.jpg',
@@ -508,7 +489,7 @@ const poses = [
 		benefits: ['opens the hips and groins', 'stretches the shoulders, rib cage and back', 'stimulates the abdominal organs, lungs and heart'],
 	},
 	{
-		id: 23,
+		id: 22,
 		name: 'tolasana',
 		nameTranslated: 'scales pose',
 		image: '/images/scales-pose.jpg',
@@ -523,7 +504,7 @@ const poses = [
 		benefits: ['strengthens arms and wrists', 'improves focus and concentration', 'opens flexibility of lower body'],
 	},
 	{
-		id: 24,
+		id: 23,
 		name: 'padmasana',
 		nameTranslated: 'lotus pose',
 		image: '/images/lotus-pose.jpg',
@@ -537,7 +518,7 @@ const poses = [
 		],
 	},
 	{
-		id: 25,
+		id: 24,
 		name: 'marichyasana I',
 		nameTranslated: 'sage marichi pose 1',
 		image: '/images/sage-marichi-pose-1.jpg',
@@ -560,7 +541,7 @@ const poses = [
 		],
 	},
 	{
-		id: 26,
+		id: 25,
 		name: 'salamba sirsasana I',
 		nameTranslated: 'supported headstand 1',
 		image: '/images/headstand-1.jpg',
@@ -585,7 +566,7 @@ const poses = [
 		],
 	},
 	{
-		id: 27,
+		id: 26,
 		name: 'salamba sarvangasana I',
 		nameTranslated: 'supported shoulderstand 1',
 		image: '/images/shoulderstand-1.jpg',
@@ -611,7 +592,7 @@ const poses = [
 		],
 	},
 	{
-		id: 28,
+		id: 27,
 		name: 'halasana',
 		nameTranslated: 'plow pose',
 		image: '/images/plow-pose.jpg',
@@ -637,7 +618,7 @@ const poses = [
 		],
 	},
 	{
-		id: 29,
+		id: 28,
 		name: 'pincha mayurasana',
 		nameTranslated: 'peacock feather pose',
 		image: '/images/peacock-feather-pose.jpg',
@@ -661,7 +642,7 @@ const poses = [
 		],
 	},
 	{
-		id: 30,
+		id: 29,
 		name: 'bakasana',
 		nameTranslated: 'crow pose',
 		image: '/images/crow-pose.jpg',
@@ -677,7 +658,7 @@ const poses = [
 		benefits: ['strengthens arms and wrists', 'stretches the upper back', 'strengthens the abdominal muscles', 'opens the groin', 'tones the abdominal organs'],
 	},
 	{
-		id: 31,
+		id: 30,
 		name: 'urdhva dhanurasana I',
 		nameTranslated: 'upward bow pose 1',
 		image: '/images/upward-bow-pose-1.jpg',
@@ -699,7 +680,7 @@ const poses = [
 		],
 	},
 	{
-		id: 32,
+		id: 31,
 		name: 'savasana',
 		nameTranslated: 'corpse pose',
 		image: '/images/corpse-pose.jpg',
@@ -723,7 +704,7 @@ const poses = [
 		],
 	},
 	{
-		id: 33,
+		id: 32,
 		name: 'purvottanasana',
 		nameTranslated: 'upward plank',
 		image: '/images/upward-plank.jpg',
@@ -738,7 +719,7 @@ const poses = [
 		benefits: ['strengthens the arms, the wrists, and the legs', 'stretches the shoulders, the chest, and the front ankles'],
 	},
 	{
-		id: 34,
+		id: 33,
 		name: 'paschimottanasana',
 		nameTranslated: 'seated forward fold',
 		image: '/images/seated-forward-fold.jpg',
@@ -762,7 +743,7 @@ const poses = [
 		],
 	},
 	{
-		id: 35,
+		id: 34,
 		name: 'chakrasana',
 		nameTranslated: 'wheel pose',
 		image: '/images/wheel-pose.jpg',
@@ -784,7 +765,7 @@ const poses = [
 		],
 	},
 	{
-		id: 36,
+		id: 35,
 		name: 'supta padangusthasana',
 		nameTranslated: 'reclining big toe pose',
 		image: '/images/reclining-big-toe-pose.jpg',
@@ -799,7 +780,7 @@ const poses = [
 		benefits: ['stretches the hamstrings and strengthens the leg'],
 	},
 	{
-		id: 37,
+		id: 36,
 		name: 'marichyasana III',
 		nameTranslated: 'marichi pose 3',
 		image: '/images/marichi-pose-3.jpg',
@@ -825,7 +806,7 @@ const poses = [
 		],
 	},
 	{
-		id: 38,
+		id: 37,
 		name: 'vasisthasana',
 		nameTranslated: 'side plank pose',
 		image: '/images/side-plank-pose.jpg',
@@ -851,7 +832,7 @@ const poses = [
 		],
 	},
 	{
-		id: 39,
+		id: 38,
 		name: 'parsva bakasana',
 		nameTranslated: 'side crow pose',
 		image: '/images/side-crow-pose.jpg',
@@ -866,7 +847,7 @@ const poses = [
 		benefits: ['strengthens arms and wrists', 'improves balance', 'tones the abdominal muscles'],
 	},
 	{
-		id: 40,
+		id: 39,
 		name: 'eka pada galavasana',
 		nameTranslated: 'flying pigeon pose',
 		image: '/images/flying-pigeon-pose.jpg',
@@ -883,22 +864,7 @@ const poses = [
 		benefits: ['strengthens the abdominal muscles and arms', 'stretches the hamstrings'],
 	},
 	{
-		id: 41,
-		name: 'supta baddha konasana',
-		nameTranslated: 'bound angle pose',
-		image: '/images/bound-angle-pose.png',
-		difficultyLevel: 'beginner',
-		category: 'supine / neutral',
-		description: [
-			'in supine position, bend both knees and drop the knees to each side, opening the hips',
-			'bring the soles of the feet together and bring the heels as close to the groin as possible, keeping the knees close to the ground',
-			'bring the hands overhead and interlace the fingers',
-			'keep the back flat on the floor',
-		],
-		benefits: ['opens the hips and groins', 'stretches the shoulders, rib cage and back', 'stimulates the abdominal organs, lungs and heart'],
-	},
-	{
-		id: 42,
+		id: 40,
 		name: 'bhujanga',
 		nameTranslated: 'baby cobra pose',
 		image: '/images/baby-cobra-pose.jpg',
@@ -931,7 +897,7 @@ const poses = [
 		],
 	},
 	{
-		id: 43,
+		id: 41,
 		name: 'setu bandha sarvangasana',
 		nameTranslated: 'bridge pose',
 		image: '/images/bridge-pose.png',
@@ -956,7 +922,7 @@ const poses = [
 		],
 	},
 	{
-		id: 44,
+		id: 42,
 		name: 'balasana',
 		nameTranslated: "child's pose",
 		image: '/images/childs-pose.png',
@@ -975,7 +941,7 @@ const poses = [
 		],
 	},
 	{
-		id: 45,
+		id: 43,
 		name: 'marjaryasana',
 		nameTranslated: 'cat pose',
 		image: '/images/cat-pose.png',
@@ -991,7 +957,7 @@ const poses = [
 		benefits: ['relieves the spine and neck', 'energizes the body'],
 	},
 	{
-		id: 46,
+		id: 44,
 		name: 'bitilasana',
 		nameTranslated: 'cow pose',
 		image: '/images/cow-pose.png',
@@ -1005,31 +971,7 @@ const poses = [
 		benefits: ['removes fatigue', 'improves breathing and the circulation of blood to the brain', 'rejuvenates the entire body'],
 	},
 	{
-		id: 47,
-		name: 'utkatasana',
-		nameTranslated: 'chair pose',
-		image: '/images/chair-pose.png',
-		difficultyLevel: 'beginner',
-		category: 'standing / balancing',
-		description: [
-			'from a standing position, the feet are together and rooted into the earth with toes actively lifted',
-			'the knees are bent and the weight of the body is on the heels of the feet',
-			'the pelvis is tucked in and the ribcage is lifted',
-			'the neck is a natural extension of the spine',
-			'the arms are lifted up toward the sky with the elbows straight and the biceps by the ears',
-			'the hands can be together or separated and facing each other with the fingers spread wide',
-			'the gaze is forward',
-		],
-		benefits: [
-			'strengthens the ankles, thighs, calves, and spine',
-			'stretches shoulders and chest',
-			'stimulates the abdominal organs, diaphragm, and heart',
-			'reduces flat feet',
-			'energizes the entire body',
-		],
-	},
-	{
-		id: 48,
+		id: 45,
 		name: 'sukhasana',
 		nameTranslated: 'easy pose',
 		image: '/images/easy-pose.png',
@@ -1048,26 +990,7 @@ const poses = [
 		],
 	},
 	{
-		id: 54,
-		name: 'sukhasana',
-		nameTranslated: 'easy pose',
-		image: '/images/easy-pose.png',
-		difficultyLevel: 'beginner',
-		category: 'seated / neutral',
-		description: [
-			'from a seated position, bring your knees into a simple cross legged pose',
-			'both knees should be below the hips',
-			'place the hands on the thighs or knees and keep the spine straight',
-		],
-		benefits: [
-			'opens the hips and stretches the knees and ankles',
-			'strengthens the back',
-			'calms the mind, reduces stress and anxiety',
-			'improves circulation and blood flow to the pelvis',
-		],
-	},
-	{
-		id: 49,
+		id: 46,
 		name: 'matsyasana',
 		nameTranslated: 'fish pose',
 		image: '/images/fish-pose.png',
@@ -1089,7 +1012,7 @@ const poses = [
 		],
 	},
 	{
-		id: 50,
+		id: 47,
 		name: 'ananda balasana',
 		nameTranslated: 'happy baby pose',
 		image: '/images/happy-baby-pose.png',
@@ -1104,7 +1027,7 @@ const poses = [
 		benefits: ['gently stretches the inner groins and the back spine', 'calms the brain and helps relieve stress and fatigue'],
 	},
 	{
-		id: 51,
+		id: 48,
 		name: 'natarajasana',
 		nameTranslated: 'lord of the dance pose',
 		image: '/images/dance-pose.png',
@@ -1121,7 +1044,7 @@ const poses = [
 		benefits: ['stretches the shoulders, the chest, the thighs, the groins and abdomen', 'strengthens the legs and the ankles', 'improves balance'],
 	},
 	{
-		id: 52,
+		id: 49,
 		name: 'supta baddha konasana',
 		nameTranslated: 'reclining bound angle pose',
 		image: '/images/reclining-bound-angle-pose.png',
