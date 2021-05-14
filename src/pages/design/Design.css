@@ -1,9 +1,9 @@
 .flex {
-    display: flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content: space-between;
-    gap: 8px;
-    height: 90vh; 
-    overflow-y: scroll;
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	height: 80vh;
+	overflow-y: scroll;
+	gap: 20px;
 }

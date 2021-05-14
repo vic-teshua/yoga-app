@@ -1,4 +1,18 @@
 .card {
-    width: 10rem;
-    height: 15rem;
+	width: 8rem;
+	height: 13rem;
+	box-shadow: 3px 3px 4px black;
+	overflow: hidden;
+
+	border: 1px solid lightgray;
+}
+
+.card-text {
+	font-size: 0.7rem;
+	text-transform: capitalize;
+	font-weight: bold;
+}
+
+.badge {
+	font-size: 0.6rem;
 }
