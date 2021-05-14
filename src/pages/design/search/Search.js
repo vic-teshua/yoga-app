@@ -1,5 +1,12 @@
+/* eslint-disable default-case */
 import React, { useState } from 'react';
 import './Search.css';
+
+const ACTIONS = {
+	SEARCH_LEVEL: 'SEARCH_LEVEL',
+	SEARCH_POSE: 'SEARCH_POSE',
+	NOT_FOUND: 'NOT_FOUND',
+};
 
 function Search(props) {
 	const { initialData, setData, setIsFound } = props;
