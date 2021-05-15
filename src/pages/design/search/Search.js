@@ -2,14 +2,8 @@
 import React, { useState } from 'react';
 import './Search.css';
 
-const ACTIONS = {
-	SEARCH_LEVEL: 'SEARCH_LEVEL',
-	SEARCH_POSE: 'SEARCH_POSE',
-	NOT_FOUND: 'NOT_FOUND',
-};
-
 function Search(props) {
-	const { initialData, setData, setIsFound } = props;
+	const { initialData, setData } = props;
 	const [searchedWord, setSearchedWord] = useState('');
 
 	function handleSubmit(e) {
@@ -21,16 +15,13 @@ function Search(props) {
 			newData = initialData.filter(item => item.difficultyLevel === searchedWord);
 			setData(newData);
 			setSearchedWord('');
-			setIsFound(true);
 		} else {
 			newData = initialData.filter(item => item.nameTranslated.includes(searchedWord));
 			setData(newData);
 			setSearchedWord('');
-			setIsFound(true);
 		}
 
 		if (newData.length <= 0) {
-			setIsFound(false);
 			setData(initialData);
 		}
 	}
@@ -43,7 +34,6 @@ function Search(props) {
 				type='reset'
 				onClick={() => {
 					setData(initialData);
-					setIsFound(true);
 					setSearchedWord('');
 				}}
 			>

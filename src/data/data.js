@@ -1,6 +1,6 @@
 const poses = [
 	{
-		id: 1,
+		id: '1',
 		name: 'tadasana',
 		nameTranslated: 'mountain pose',
 		image: '/images/mountain-pose.jpeg',
@@ -20,7 +20,7 @@ const poses = [
 		benefits: ['improves posture', 'strengthens thighs, knees, and ankles', 'firms abdomen and buttocks', 'relieves sciatica', 'reduces flat feet'],
 	},
 	{
-		id: 2,
+		id: '2',
 		name: 'vrksasana',
 		nameTranslated: 'tree pose',
 		image: '/images/tree-pose.jpeg',
@@ -36,7 +36,7 @@ const poses = [
 		benefits: ['strengthens the legs, ankles, and feet', 'improves flexibility in the hips and knees', 'improves balance'],
 	},
 	{
-		id: 3,
+		id: '3',
 		name: 'utthita trikonasana',
 		nameTranslated: 'extended triangle pose',
 		image: '/images/triangle-pose.png',
@@ -64,7 +64,7 @@ const poses = [
 		],
 	},
 	{
-		id: 4,
+		id: '4',
 		name: 'parivrtta trikonasana',
 		nameTranslated: 'revolved triangle pose',
 		image: '/images/revolved-triangle-pose.png',
@@ -90,7 +90,7 @@ const poses = [
 		],
 	},
 	{
-		id: 5,
+		id: '5',
 		name: 'utthita parsvakonasana',
 		nameTranslated: 'extended side angle pose',
 		image: '/images/side-angle-pose.jpeg',
@@ -116,7 +116,7 @@ const poses = [
 		],
 	},
 	{
-		id: 6,
+		id: '6',
 		name: 'virabhadrasana I',
 		nameTranslated: 'warrior pose 1',
 		image: '/images/warrior-pose-1.jpg',
@@ -140,7 +140,7 @@ const poses = [
 		],
 	},
 	{
-		id: 7,
+		id: '7',
 		name: 'virabhadrasana II',
 		nameTranslated: 'warrior pose 2',
 		image: '/images/warrior-pose-2.jpeg',
@@ -166,7 +166,7 @@ const poses = [
 		],
 	},
 	{
-		id: 8,
+		id: '8',
 		name: 'virabhadrasana III',
 		nameTranslated: 'warrior pose 3',
 		image: '/images/warrior-pose-3.jpg',
@@ -183,7 +183,7 @@ const poses = [
 		benefits: ['strengthens the ankles and legs', 'strengthens the shoulders and muscles of the back', 'tones the abdomen', 'improves balance and posture'],
 	},
 	{
-		id: 9,
+		id: '9',
 		name: 'utthita hasta padangusthasana',
 		nameTranslated: 'extended hand to big toe pose',
 		image: '/images/hand-to-toe.jpg',
@@ -199,7 +199,7 @@ const poses = [
 		benefits: ['stretches the hamstrings and strengthens the legs', 'improves balance'],
 	},
 	{
-		id: 10,
+		id: '10',
 		name: 'utkatasana',
 		nameTranslated: 'chair pose',
 		image: '/images/chair-pose.jpg',
@@ -223,7 +223,7 @@ const poses = [
 		],
 	},
 	{
-		id: 11,
+		id: '11',
 		name: 'ustrasana',
 		nameTranslated: 'camel pose',
 		image: '/images/camel-pose.jpg',
@@ -251,7 +251,7 @@ const poses = [
 		],
 	},
 	{
-		id: 12,
+		id: '12',
 		name: 'padahastasana',
 		nameTranslated: 'hand under foot pose',
 		image: '/images/hand-under-foot-pose.jpg',
@@ -277,7 +277,7 @@ const poses = [
 		],
 	},
 	{
-		id: 13,
+		id: '13',
 		name: 'garudasana',
 		nameTranslated: 'eagle pose',
 		image: '/images/eagle-pose.jpg',
@@ -300,7 +300,7 @@ const poses = [
 		],
 	},
 	{
-		id: 14,
+		id: '14',
 		name: 'salabhasana',
 		nameTranslated: 'locust pose',
 		image: '/images/locust-pose.jpg',
@@ -323,7 +323,7 @@ const poses = [
 		],
 	},
 	{
-		id: 15,
+		id: '15',
 		name: 'urdhva mukha svanasana',
 		nameTranslated: 'upward facing dog pose',
 		image: '/images/upward-dog-pose.jpg',
@@ -351,7 +351,7 @@ const poses = [
 		],
 	},
 	{
-		id: 16,
+		id: '16',
 		name: 'adho mukha svanasana',
 		nameTranslated: 'downward facing dog pose',
 		image: '/images/downward-dog-pose.jpg',
@@ -382,7 +382,7 @@ const poses = [
 		],
 	},
 	{
-		id: 17,
+		id: '17',
 		name: 'dandasana',
 		nameTranslated: 'staff pose',
 		image: '/images/staff-pose.jpg',
@@ -404,7 +404,7 @@ const poses = [
 		benefits: ['strengthens the back muscles', 'stretches the shoulders and chest'],
 	},
 	{
-		id: 18,
+		id: '18',
 		name: 'paripurna navasana',
 		nameTranslated: 'full boat pose',
 		image: '/images/boat-pose.jpg',
@@ -425,7 +425,7 @@ const poses = [
 		],
 	},
 	{
-		id: 19,
+		id: '19',
 		name: 'virasana',
 		nameTranslated: 'hero pose',
 		image: '/images/hero-pose.jpg',
@@ -451,7 +451,7 @@ const poses = [
 		],
 	},
 	{
-		id: 20,
+		id: '20',
 		name: 'supta virasana',
 		nameTranslated: 'reclining hero pose',
 		image: '/images/reclining-hero-pose.jpg',
@@ -474,7 +474,7 @@ const poses = [
 		],
 	},
 	{
-		id: 21,
+		id: '21',
 		name: 'baddha konasana',
 		nameTranslated: 'bound angle pose',
 		image: '/images/bound-angle-pose.jpg',
@@ -489,7 +489,7 @@ const poses = [
 		benefits: ['opens the hips and groins', 'stretches the shoulders, rib cage and back', 'stimulates the abdominal organs, lungs and heart'],
 	},
 	{
-		id: 22,
+		id: '22',
 		name: 'tolasana',
 		nameTranslated: 'scales pose',
 		image: '/images/scales-pose.jpg',
@@ -504,7 +504,7 @@ const poses = [
 		benefits: ['strengthens arms and wrists', 'improves focus and concentration', 'opens flexibility of lower body'],
 	},
 	{
-		id: 23,
+		id: '23',
 		name: 'padmasana',
 		nameTranslated: 'lotus pose',
 		image: '/images/lotus-pose.jpg',
@@ -518,7 +518,7 @@ const poses = [
 		],
 	},
 	{
-		id: 24,
+		id: '24',
 		name: 'marichyasana I',
 		nameTranslated: 'sage marichi pose 1',
 		image: '/images/sage-marichi-pose-1.jpg',
@@ -541,7 +541,7 @@ const poses = [
 		],
 	},
 	{
-		id: 25,
+		id: '25',
 		name: 'salamba sirsasana I',
 		nameTranslated: 'supported headstand 1',
 		image: '/images/headstand-1.jpg',
@@ -566,7 +566,7 @@ const poses = [
 		],
 	},
 	{
-		id: 26,
+		id: '26',
 		name: 'salamba sarvangasana I',
 		nameTranslated: 'supported shoulderstand 1',
 		image: '/images/shoulderstand-1.jpg',
@@ -592,7 +592,7 @@ const poses = [
 		],
 	},
 	{
-		id: 27,
+		id: '27',
 		name: 'halasana',
 		nameTranslated: 'plow pose',
 		image: '/images/plow-pose.jpg',
@@ -618,7 +618,7 @@ const poses = [
 		],
 	},
 	{
-		id: 28,
+		id: '28',
 		name: 'pincha mayurasana',
 		nameTranslated: 'peacock feather pose',
 		image: '/images/peacock-feather-pose.jpg',
@@ -642,7 +642,7 @@ const poses = [
 		],
 	},
 	{
-		id: 29,
+		id: '29',
 		name: 'bakasana',
 		nameTranslated: 'crow pose',
 		image: '/images/crow-pose.jpg',
@@ -658,7 +658,7 @@ const poses = [
 		benefits: ['strengthens arms and wrists', 'stretches the upper back', 'strengthens the abdominal muscles', 'opens the groin', 'tones the abdominal organs'],
 	},
 	{
-		id: 30,
+		id: '30',
 		name: 'urdhva dhanurasana I',
 		nameTranslated: 'upward bow pose 1',
 		image: '/images/upward-bow-pose-1.jpg',
@@ -680,7 +680,7 @@ const poses = [
 		],
 	},
 	{
-		id: 31,
+		id: '31',
 		name: 'savasana',
 		nameTranslated: 'corpse pose',
 		image: '/images/corpse-pose.jpg',
@@ -704,7 +704,7 @@ const poses = [
 		],
 	},
 	{
-		id: 32,
+		id: '32',
 		name: 'purvottanasana',
 		nameTranslated: 'upward plank',
 		image: '/images/upward-plank.jpg',
@@ -719,7 +719,7 @@ const poses = [
 		benefits: ['strengthens the arms, the wrists, and the legs', 'stretches the shoulders, the chest, and the front ankles'],
 	},
 	{
-		id: 33,
+		id: '33',
 		name: 'paschimottanasana',
 		nameTranslated: 'seated forward fold',
 		image: '/images/seated-forward-fold.jpg',
@@ -743,7 +743,7 @@ const poses = [
 		],
 	},
 	{
-		id: 34,
+		id: '34',
 		name: 'chakrasana',
 		nameTranslated: 'wheel pose',
 		image: '/images/wheel-pose.jpg',
@@ -765,7 +765,7 @@ const poses = [
 		],
 	},
 	{
-		id: 35,
+		id: '35',
 		name: 'supta padangusthasana',
 		nameTranslated: 'reclining big toe pose',
 		image: '/images/reclining-big-toe-pose.jpg',
@@ -780,7 +780,7 @@ const poses = [
 		benefits: ['stretches the hamstrings and strengthens the leg'],
 	},
 	{
-		id: 36,
+		id: '36',
 		name: 'marichyasana III',
 		nameTranslated: 'marichi pose 3',
 		image: '/images/marichi-pose-3.jpg',
@@ -806,7 +806,7 @@ const poses = [
 		],
 	},
 	{
-		id: 37,
+		id: '37',
 		name: 'vasisthasana',
 		nameTranslated: 'side plank pose',
 		image: '/images/side-plank-pose.jpg',
@@ -832,7 +832,7 @@ const poses = [
 		],
 	},
 	{
-		id: 38,
+		id: '38',
 		name: 'parsva bakasana',
 		nameTranslated: 'side crow pose',
 		image: '/images/side-crow-pose.jpg',
@@ -847,7 +847,7 @@ const poses = [
 		benefits: ['strengthens arms and wrists', 'improves balance', 'tones the abdominal muscles'],
 	},
 	{
-		id: 39,
+		id: '39',
 		name: 'eka pada galavasana',
 		nameTranslated: 'flying pigeon pose',
 		image: '/images/flying-pigeon-pose.jpg',
@@ -864,7 +864,7 @@ const poses = [
 		benefits: ['strengthens the abdominal muscles and arms', 'stretches the hamstrings'],
 	},
 	{
-		id: 40,
+		id: '40',
 		name: 'bhujanga',
 		nameTranslated: 'baby cobra pose',
 		image: '/images/baby-cobra-pose.jpg',
@@ -897,7 +897,7 @@ const poses = [
 		],
 	},
 	{
-		id: 41,
+		id: '41',
 		name: 'setu bandha sarvangasana',
 		nameTranslated: 'bridge pose',
 		image: '/images/bridge-pose.png',
@@ -922,7 +922,7 @@ const poses = [
 		],
 	},
 	{
-		id: 42,
+		id: '42',
 		name: 'balasana',
 		nameTranslated: "child's pose",
 		image: '/images/childs-pose.png',
@@ -941,7 +941,7 @@ const poses = [
 		],
 	},
 	{
-		id: 43,
+		id: '43',
 		name: 'marjaryasana',
 		nameTranslated: 'cat pose',
 		image: '/images/cat-pose.png',
@@ -957,7 +957,7 @@ const poses = [
 		benefits: ['relieves the spine and neck', 'energizes the body'],
 	},
 	{
-		id: 44,
+		id: '44',
 		name: 'bitilasana',
 		nameTranslated: 'cow pose',
 		image: '/images/cow-pose.png',
@@ -971,7 +971,7 @@ const poses = [
 		benefits: ['removes fatigue', 'improves breathing and the circulation of blood to the brain', 'rejuvenates the entire body'],
 	},
 	{
-		id: 45,
+		id: '45',
 		name: 'sukhasana',
 		nameTranslated: 'easy pose',
 		image: '/images/easy-pose.png',
@@ -990,7 +990,7 @@ const poses = [
 		],
 	},
 	{
-		id: 46,
+		id: '46',
 		name: 'matsyasana',
 		nameTranslated: 'fish pose',
 		image: '/images/fish-pose.png',
@@ -1012,7 +1012,7 @@ const poses = [
 		],
 	},
 	{
-		id: 47,
+		id: '47',
 		name: 'ananda balasana',
 		nameTranslated: 'happy baby pose',
 		image: '/images/happy-baby-pose.png',
@@ -1027,7 +1027,7 @@ const poses = [
 		benefits: ['gently stretches the inner groins and the back spine', 'calms the brain and helps relieve stress and fatigue'],
 	},
 	{
-		id: 48,
+		id: '48',
 		name: 'natarajasana',
 		nameTranslated: 'lord of the dance pose',
 		image: '/images/dance-pose.png',
@@ -1044,7 +1044,7 @@ const poses = [
 		benefits: ['stretches the shoulders, the chest, the thighs, the groins and abdomen', 'strengthens the legs and the ankles', 'improves balance'],
 	},
 	{
-		id: 49,
+		id: '49',
 		name: 'supta baddha konasana',
 		nameTranslated: 'reclining bound angle pose',
 		image: '/images/reclining-bound-angle-pose.png',
