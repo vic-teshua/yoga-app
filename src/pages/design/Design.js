@@ -12,6 +12,7 @@ import columnsData from '../../data/columnsData';
 function Design() {
 	const [data, setData] = useState(asanaData);
 	const [state, setState] = useState(columnsData);
+
 	// search
 	const [searchedWord, setSearchedWord] = useState('');
 
@@ -46,13 +47,11 @@ function Design() {
 					[newColumn.id]: newColumn,
 				},
 			};
-
 			setState(newState);
 			return;
 		}
 
 		// DRAG and DROP between columns
-
 		// START
 		const startPosesId = Array.from(start.posesIds);
 		startPosesId.splice(source.index, 1);
@@ -62,7 +61,7 @@ function Design() {
 			posesIds: startPosesId,
 		};
 
-		// FINISH
+		// FINISH (destination)
 		const finishPosesIds = Array.from(finish.posesIds);
 		finishPosesIds.splice(destination.index, 0, draggableId);
 
@@ -80,7 +79,6 @@ function Design() {
 				[newFinish.id]: newFinish,
 			},
 		};
-
 		setState(newState);
 	};
 
@@ -88,7 +86,7 @@ function Design() {
 	const handleSubmit = e => {
 		e.preventDefault();
 
-		// get data from column 1
+		// get data from column 1 as at a given period of time
 		const column1 = state.columns['column-1'];
 		const posesFromCol1 = column1.posesIds.map(poseIds => data.filter(item => item.id === poseIds)[0]);
 
@@ -98,7 +96,6 @@ function Design() {
 		let searchName = posesFromCol1.filter(item => item.nameTranslated.includes(searchedWordToCheck));
 		let newData = [...searchLevel, ...searchName];
 
-		console.log(newData);
 		if (newData.length <= 0) {
 			console.log('No Matches');
 		}
@@ -118,6 +115,8 @@ function Design() {
 				'column-1': newFilteredCol,
 			},
 		};
+
+		console.log(newState);
 
 		//update state with new data
 		setState(newState);
@@ -153,11 +152,12 @@ function Design() {
 				</div>
 
 				{/* PRINT */}
-				<div className='col d-flex'>
-					<button>
-						<i className='fas fa-print'></i> print
+				<div className='col'>
+					<button onClick={() => window.print()}>
+						<i className='fas fa-print'></i> Print
 					</button>
 
+					{/* RESET */}
 					<button type='reset' onClick={handleReset}>
 						Remove Cards
 					</button>
