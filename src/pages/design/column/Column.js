@@ -3,6 +3,8 @@ import { Droppable } from 'react-beautiful-dnd';
 import AsanaCard from '../card/Card';
 
 function Column(props) {
+	console.log(props.column.id);
+
 	return (
 		<Droppable droppableId={props.column.id} direction='horizontal'>
 			{(provided, snapshot) => {

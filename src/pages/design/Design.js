@@ -13,6 +13,10 @@ import columnsData from '../../data/columnsData';
 function Design() {
 	const [data, setData] = useState(asanaData);
 	const [state, setState] = useState(columnsData);
+	// search
+	const [searchedWord, setSearchedWord] = useState('');
+
+	const searchedWordToCheck = searchedWord.trim().toLowerCase();
 
 	const onDragEnd = result => {
 		const { destination, source, draggableId } = result;
@@ -83,7 +87,61 @@ function Design() {
 		setState(newState);
 	};
 
-	const posesFromCol1 = state.columns['column-1'].posesIds.map(poseIds => data.filter(item => item.id === poseIds)[0]);
+	const column1 = state.columns['column-1'];
+	const posesFromCol1 = column1.posesIds.map(poseIds => data.filter(item => item.id === poseIds)[0]);
+
+	// const [dataCol1, setDataCol1] = useState(posesFromCol1);
+
+	const handleSubmit = e => {
+		e.preventDefault();
+
+		console.log('COL1 =>', posesFromCol1);
+		let newData = [];
+
+		if (searchedWord === 'beginner' || searchedWord === 'intermediate' || searchedWord === 'expert') {
+			newData = posesFromCol1.filter(item => item.difficultyLevel === searchedWord);
+		} else {
+			newData = posesFromCol1.filter(item => item.nameTranslated.includes(searchedWord));
+		}
+
+		if (newData.length <= 0) {
+			console.log('No Matches');
+		}
+
+		const filteredPosesId = newData.map(item => item.id);
+
+		const newFilteredCol = {
+			...column1,
+			posesIds: filteredPosesId,
+		};
+
+		console.log('filtered -->', newFilteredCol);
+		const newState = {
+			...state,
+			columns: {
+				...state.columns,
+				'column-1': newFilteredCol,
+			},
+		};
+
+		//update state with new data
+		setState(newState);
+	};
+
+	const handleReset = () => {
+		const initialPoses = asanaData.map(item => item.id);
+
+		const newState = {
+			...state,
+			columns: {
+				...state.columns,
+				'column-1': { id: 'column-1', posesIds: initialPoses },
+				'column-2': { id: 'column-2', posesIds: [] },
+			},
+		};
+
+		setState(newState);
+	};
 
 	return (
 		<div className='container-fluid'>
@@ -91,7 +149,13 @@ function Design() {
 			{/* SEARCH */}
 			<div className='row'>
 				<div className='col'>
-					<Search setData={setData} posesToSearch={posesFromCol1} initialData={asanaData} />
+					<form className='search-form' onSubmit={handleSubmit}>
+						<input type='text' placeholder='Search' value={searchedWord} onChange={e => setSearchedWord(e.target.value)} />
+						<button type='submit'>Search</button>
+						<button type='reset' onClick={handleReset}>
+							Reset
+						</button>
+					</form>
 				</div>
 
 				{/* PRINT */}
@@ -109,15 +173,8 @@ function Design() {
 					{state.columnOrder.map(columnId => {
 						const column = state.columns[columnId];
 						const poses = column.posesIds.map(posesIds => data.filter(item => item.id === posesIds)[0]);
-						// console.log('POSES XXXXXXXS=>>', poses);
-						console.log('COLUMN XXXXXs ==>>', column);
-						// console.log('STATE XXXX==>>', data);
 
-						return (
-							<Column className='col' key={columnId} column={column} poses={poses}>
-								a
-							</Column>
-						);
+						return <Column className='col' key={columnId} column={column} poses={poses} />;
 					})}
 				</div>
 			</DragDropContext>
