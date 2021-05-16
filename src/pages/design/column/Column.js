@@ -5,15 +5,22 @@ import AsanaCard from '../card/Card';
 function Column(props) {
 	return (
 		<Droppable droppableId={props.column.id} direction='horizontal'>
-			{provided => (
-				<div className='col flex' ref={provided.innerRef} {...provided.droppableProps}>
-					{props.poses.map((pose, index) => (
-						<AsanaCard key={pose.id} {...pose} index={index} />
-					))}
+			{(provided, snapshot) => {
+				return (
+					<div
+						className='col flex'
+						style={snapshot.isDraggingOver ? { backgroundColor: 'wheat' } : { backgroundColor: 'inherit' }}
+						ref={provided.innerRef}
+						{...provided.droppableProps}
+					>
+						{props.poses.map((pose, index) => (
+							<AsanaCard key={pose.id} {...pose} index={index} />
+						))}
 
-					{provided.placeholder}
-				</div>
-			)}
+						{provided.placeholder}
+					</div>
+				);
+			}}
 		</Droppable>
 	);
 }

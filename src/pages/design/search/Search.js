@@ -3,38 +3,43 @@ import React, { useState } from 'react';
 import './Search.css';
 
 function Search(props) {
-	const { initialData, setData } = props;
+	const { posesToSearch, initialData, setData } = props;
 	const [searchedWord, setSearchedWord] = useState('');
 
+	const searchedWordToCheck = searchedWord.trim().toLowerCase();
 	function handleSubmit(e) {
 		e.preventDefault();
+		console.log(searchedWordToCheck);
 
 		let newData = [];
 
 		if (searchedWord === 'beginner' || searchedWord === 'intermediate' || searchedWord === 'expert') {
-			newData = initialData.filter(item => item.difficultyLevel === searchedWord);
-			setData(newData);
+			newData = posesToSearch.filter(item => item.difficultyLevel === searchedWord);
+			//setData(newData);
 			setSearchedWord('');
+			console.log(newData);
 		} else {
-			newData = initialData.filter(item => item.nameTranslated.includes(searchedWord));
-			setData(newData);
+			newData = posesToSearch.filter(item => item.nameTranslated.includes(searchedWord));
+			// setData(newData);
 			setSearchedWord('');
+			console.log(newData);
 		}
 
 		if (newData.length <= 0) {
-			setData(initialData);
+			// setData(posesToSearch);
+			console.log('No Matches');
 		}
 	}
 
 	return (
 		<form className='search-form' onSubmit={handleSubmit}>
-			<input type='text' placeholder='Search' value={searchedWord} onChange={e => setSearchedWord(e.target.value.trim().toLowerCase())} />
+			<input type='text' placeholder='Search' value={searchedWord} onChange={e => setSearchedWord(e.target.value)} />
 			<button type='submit'>Search</button>
 			<button
 				type='reset'
 				onClick={() => {
-					setData(initialData);
 					setSearchedWord('');
+					setData(initialData);
 				}}
 			>
 				Reset

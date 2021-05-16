@@ -22,10 +22,37 @@ function Design() {
 
 		if (destination.droppableID === source.droppableID && destination.index === source.index) return;
 
+		const start = state.columns[source.droppableId];
+		const finish = state.columns[destination.droppableId];
+
+		// DRAG and DROP inside one column
+		if (start === finish) {
+			const newPosesIds = Array.from(start.posesIds);
+			newPosesIds.splice(source.index, 1);
+			newPosesIds.splice(destination.index, 0, draggableId);
+
+			// create new column with the same properties but with the new poses Ids array
+			const newColumn = {
+				...start,
+				posesIds: newPosesIds,
+			};
+
+			// update the state
+			const newState = {
+				...state,
+				columns: {
+					...state.columns,
+					[newColumn.id]: newColumn,
+				},
+			};
+
+			setState(newState);
+			return;
+		}
+
 		// DRAG and DROP between columns
 
 		// START
-		const start = state.columns[source.droppableId];
 		const startPosesId = Array.from(start.posesIds);
 		startPosesId.splice(source.index, 1);
 
@@ -35,7 +62,6 @@ function Design() {
 		};
 
 		// FINISH
-		const finish = state.columns[destination.droppableId];
 		const finishPosesIds = Array.from(finish.posesIds);
 		finishPosesIds.splice(destination.index, 0, draggableId);
 
@@ -57,13 +83,15 @@ function Design() {
 		setState(newState);
 	};
 
+	const posesFromCol1 = state.columns['column-1'].posesIds.map(poseIds => data.filter(item => item.id === poseIds)[0]);
+
 	return (
 		<div className='container-fluid'>
 			{/*************************************** row 1 *****************************/}
 			{/* SEARCH */}
 			<div className='row'>
 				<div className='col'>
-					<Search setData={setData} initialData={asanaData} />
+					<Search setData={setData} posesToSearch={posesFromCol1} initialData={asanaData} />
 				</div>
 
 				{/* PRINT */}
@@ -81,6 +109,9 @@ function Design() {
 					{state.columnOrder.map(columnId => {
 						const column = state.columns[columnId];
 						const poses = column.posesIds.map(posesIds => data.filter(item => item.id === posesIds)[0]);
+						// console.log('POSES XXXXXXXS=>>', poses);
+						console.log('COLUMN XXXXXs ==>>', column);
+						// console.log('STATE XXXX==>>', data);
 
 						return (
 							<Column className='col' key={columnId} column={column} poses={poses}>
