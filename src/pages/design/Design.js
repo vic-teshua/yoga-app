@@ -3,7 +3,6 @@ import './Design.css';
 import { DragDropContext } from 'react-beautiful-dnd';
 
 // components
-import Search from './search/Search';
 import Column from './column/Column';
 
 // data
@@ -15,8 +14,6 @@ function Design() {
 	const [state, setState] = useState(columnsData);
 	// search
 	const [searchedWord, setSearchedWord] = useState('');
-
-	const searchedWordToCheck = searchedWord.trim().toLowerCase();
 
 	const onDragEnd = result => {
 		const { destination, source, draggableId } = result;
@@ -87,21 +84,21 @@ function Design() {
 		setState(newState);
 	};
 
-	const column1 = state.columns['column-1'];
-	const posesFromCol1 = column1.posesIds.map(poseIds => data.filter(item => item.id === poseIds)[0]);
-
-	// const [dataCol1, setDataCol1] = useState(posesFromCol1);
-
+	// SUBMIT SEARCH
 	const handleSubmit = e => {
 		e.preventDefault();
+
+		const column1 = state.columns['column-1'];
+		const posesFromCol1 = column1.posesIds.map(poseIds => data.filter(item => item.id === poseIds)[0]);
+		const searchedWordToCheck = searchedWord.trim().toLowerCase();
 
 		console.log('COL1 =>', posesFromCol1);
 		let newData = [];
 
-		if (searchedWord === 'beginner' || searchedWord === 'intermediate' || searchedWord === 'expert') {
-			newData = posesFromCol1.filter(item => item.difficultyLevel === searchedWord);
+		if (searchedWordToCheck === 'beginner' || searchedWordToCheck === 'intermediate' || searchedWordToCheck === 'expert') {
+			newData = posesFromCol1.filter(item => item.difficultyLevel === searchedWordToCheck);
 		} else {
-			newData = posesFromCol1.filter(item => item.nameTranslated.includes(searchedWord));
+			newData = posesFromCol1.filter(item => item.nameTranslated.includes(searchedWordToCheck));
 		}
 
 		if (newData.length <= 0) {
@@ -128,6 +125,7 @@ function Design() {
 		setState(newState);
 	};
 
+	//RESET
 	const handleReset = () => {
 		const initialPoses = asanaData.map(item => item.id);
 
