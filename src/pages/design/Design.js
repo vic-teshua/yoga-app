@@ -88,23 +88,22 @@ function Design() {
 	const handleSubmit = e => {
 		e.preventDefault();
 
+		// get data from column 1
 		const column1 = state.columns['column-1'];
 		const posesFromCol1 = column1.posesIds.map(poseIds => data.filter(item => item.id === poseIds)[0]);
+
+		// filter this data by the searched word
 		const searchedWordToCheck = searchedWord.trim().toLowerCase();
+		let searchLevel = posesFromCol1.filter(item => item.difficultyLevel === searchedWordToCheck);
+		let searchName = posesFromCol1.filter(item => item.nameTranslated.includes(searchedWordToCheck));
+		let newData = [...searchLevel, ...searchName];
 
-		console.log('COL1 =>', posesFromCol1);
-		let newData = [];
-
-		if (searchedWordToCheck === 'beginner' || searchedWordToCheck === 'intermediate' || searchedWordToCheck === 'expert') {
-			newData = posesFromCol1.filter(item => item.difficultyLevel === searchedWordToCheck);
-		} else {
-			newData = posesFromCol1.filter(item => item.nameTranslated.includes(searchedWordToCheck));
-		}
-
+		console.log(newData);
 		if (newData.length <= 0) {
 			console.log('No Matches');
 		}
 
+		// update state with filtered array
 		const filteredPosesId = newData.map(item => item.id);
 
 		const newFilteredCol = {
@@ -112,7 +111,6 @@ function Design() {
 			posesIds: filteredPosesId,
 		};
 
-		console.log('filtered -->', newFilteredCol);
 		const newState = {
 			...state,
 			columns: {
@@ -123,6 +121,7 @@ function Design() {
 
 		//update state with new data
 		setState(newState);
+		setSearchedWord('');
 	};
 
 	//RESET
@@ -150,18 +149,18 @@ function Design() {
 					<form className='search-form' onSubmit={handleSubmit}>
 						<input type='text' placeholder='Search' value={searchedWord} onChange={e => setSearchedWord(e.target.value)} />
 						<button type='submit'>Search</button>
-						<button type='reset' onClick={handleReset}>
-							Reset
-						</button>
 					</form>
 				</div>
 
 				{/* PRINT */}
 				<div className='col d-flex'>
-					<button style={{ marginBottom: '20px' }}>
+					<button>
 						<i className='fas fa-print'></i> print
 					</button>
-					<p>Drop here</p>
+
+					<button type='reset' onClick={handleReset}>
+						Remove Cards
+					</button>
 				</div>
 			</div>
 
