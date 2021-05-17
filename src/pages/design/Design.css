@@ -7,3 +7,9 @@
 	overflow-y: scroll;
 	gap: 20px;
 }
+
+@media print {
+	.column-to-print {
+		display: flex;
+	}
+}
