@@ -3,13 +3,13 @@ import './App.css';
 import Design from './pages/design/Design';
 import Contact from './pages/Contact/ContactForm';
 import About from './pages/About/About';
-import React, { useRef } from 'react'
+import React from 'react'
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Navigation from './pages/Home/components/Navigation/Navigation';
 
 
 function App() {
-	const modal = useRef(null);
+	
 	return (
 		<Router>
 			<Navigation />
@@ -27,7 +27,7 @@ function App() {
 					<About />
 				</Route>
 			</Switch>
-		
+			
 			</Router>
 		
 	);
