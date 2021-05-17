@@ -1,74 +1,76 @@
 import React from "react";
 import "./style.css";
-import {
-  Header,
-  Container,
-  Form,
-  Input,
-  TextArea,
-  Button,
-  Select,
-  Image,
-} from "semantic-ui-react";
 
-const genderOptions = [
-  { key: "m", text: "Male", value: "male" },
-  { key: "f", text: "Female", value: "female" },
-  { key: "o", text: "Other", value: "other" },
-];
+import { Form, Button, Container, Col, Row, Image } from "react-bootstrap";
 
-const FormExampleFieldControlId = () => (
-  <Container>
-    <Header as="h1">Get in touch </Header>
-    <Image centered src={"Viktoria's Yoga Club.png"} size={"medium"} />
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <Container>
+          <Row>
+            <Col></Col>
+            <Col lg={6}>
+              <Image src="Viktoria's Yoga Club.png" rounded />
+            </Col>
+            <Col></Col>
+          </Row>
+        </Container>
+        <Container>
+          <Row>
+            <Col lg={6}>
+              <Form>
+                <Row>
+                  <Col lg={6}>
+                    <Form.Group controlId="formBasicFirstName">
+                      <Form.Label>First Name</Form.Label>
+                      <Form.Control required size="lg" type="text" />
+                    </Form.Group>
+                  </Col>
 
-    <Form>
-      <Form.Group widths="equal">
-        <Form.Field
-          id="form-input-control-first-name"
-          control={Input}
-          label="First name"
-          placeholder="First name"
-        />
-        <Form.Field
-          id="form-input-control-last-name"
-          control={Input}
-          label="Last name"
-          placeholder="Last name"
-        />
-        <Form.Field
-          control={Select}
-          options={genderOptions}
-          label={{ children: "Gender", htmlFor: "form-select-control-gender" }}
-          placeholder="Gender"
-          search
-          searchInput={{ id: "form-select-control-gender" }}
-        />
-      </Form.Group>
-      <Form.Field
-        id="form-textarea-control-opinion"
-        control={TextArea}
-        label="Opinion"
-        placeholder="Opinion"
-      />
-      <Form.Field
-        id="form-input-control-error-email"
-        control={Input}
-        label="Email"
-        placeholder="joe@schmoe.com"
-        // error={{
-        //   content: "Please enter a valid email address",
-        //   pointing: "below",
-        // }}
-      />
-      <Form.Field
-        id="form-button-control-public"
-        control={Button}
-        content="Confirm"
-        // label="Label with htmlFor"
-      />
-    </Form>
-  </Container>
-);
+                  <Col lg={6}>
+                    <Form.Group controlId="formBasicLastName">
+                      <Form.Label>Last Name</Form.Label>
+                      <Form.Control required size="lg" type="text" />
+                    </Form.Group>
+                  </Col>
+                </Row>
 
-export default FormExampleFieldControlId;
+                <Form.Group controlId="formEmail">
+                  <Form.Label>Email Adress</Form.Label>
+                  <Form.Control
+                    required
+                    type="email"
+                    placeholder="Example@email.com"
+                  />
+                  <Form.Text className="text-muted">
+                    We'll never share your email address, trust us!
+                  </Form.Text>
+                </Form.Group>
+
+                <Form.Group controlId="formBasicPhone">
+                  <Form.Label>Phone Number (optional)</Form.Label>
+                  <Form.Control type="text" />
+                </Form.Group>
+
+                <Form.Group controlId="formBasicWhatAreYouLookingForr">
+                  <Form.Label>How can we help you online?</Form.Label>
+                  <Form.Control
+                    required
+                    as="textarea"
+                    rows="3"
+                    placeholder="What do you do?"
+                  />
+                </Form.Group>
+                <Button type="submit">Submit</Button>
+              </Form>
+            </Col>
+            <Col lg={6}>Additional Text goes here</Col>
+          </Row>
+        </Container>
+      </header>
+    </div>
+  );
+}
+
+export default App;
