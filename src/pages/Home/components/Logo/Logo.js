@@ -7,12 +7,10 @@ const Logo = () => {
         <div className="container">
         <video autoPlay src={video1} type="video/mp4" muted></video>
         <h3 className="intro">Design Your Daily Yoga Practice</h3>
-        <button className="button">
         <Link to='/design'>
-        Start now
-        </Link>
+        <button className="btn"><span class="noselect">Start Now </span>
         </button>
-        
+        </Link>
         </div>
     )
 }
