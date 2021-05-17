@@ -8,7 +8,7 @@ const Logo = () => {
         <video autoPlay src={video1} type="video/mp4" muted></video>
         <h3 className="intro">Design Your Daily Yoga Practice</h3>
         <Link to='/design'>
-        <button className="btn"><span class="noselect">Start Now </span>
+        <button className="btn btn2"><span class="noselect">Start Now </span>
         </button>
         </Link>
         </div>

@@ -19,7 +19,7 @@ video {
 }
 
 
-.btn {
+.btn2 {
     top: 70%;
     left: 50%;
     transform:translateX(-50%);
@@ -29,11 +29,11 @@ video {
     overflow: hidden;
   }
   
-  .btn:hover {
+  .btn2:hover {
     box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
   }
   
-  .btn:before {
+  .btn2:before {
     content: "";
     position: absolute;
     top: 0;
@@ -49,7 +49,7 @@ video {
     transition: all 650ms;
   }
   
-  .btn:hover:before {
+  .btn2:hover:before {
     left: 100%;
   }
   
@@ -57,7 +57,7 @@ video {
 @media screen and (max-width: 522px) {
 
     
-    .btn {
+    .btn2 {
        
         top: 75%;
        
