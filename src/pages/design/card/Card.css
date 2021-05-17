@@ -4,13 +4,19 @@
 	box-shadow: 3px 3px 4px black;
 	overflow: hidden;
 
+	cursor: grabbing;
 	border: 1px solid lightgray;
+}
+
+.card-img-top {
+	cursor: grabbing;
 }
 
 .card-text {
 	font-size: 0.7rem;
 	text-transform: capitalize;
 	font-weight: bold;
+	cursor: grabbing;
 }
 
 .badge {
