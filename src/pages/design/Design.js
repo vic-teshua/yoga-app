@@ -139,6 +139,12 @@ function Design() {
 		setState(newState);
 	};
 
+	const column1 = state.columns['column-1'];
+	const posesFromCol1 = column1.posesIds.map(poseIds => data.filter(item => item.id === poseIds)[0]);
+
+	const column2 = state.columns['column-2'];
+	const posesFromCol2 = column2.posesIds.map(poseIds => data.filter(item => item.id === poseIds)[0]);
+
 	return (
 		<div className='container-fluid'>
 			{/*************************************** row 1 *****************************/}
@@ -167,12 +173,9 @@ function Design() {
 			{/*************************************** row 2 *****************************/}
 			<DragDropContext onDragEnd={onDragEnd}>
 				<div className='row'>
-					{state.columnOrder.map(columnId => {
-						const column = state.columns[columnId];
-						const poses = column.posesIds.map(posesIds => data.filter(item => item.id === posesIds)[0]);
+					<Column key={column1.id} column={column1} poses={posesFromCol1} />
 
-						return <Column className='col' key={columnId} column={column} poses={poses} />;
-					})}
+					<Column key={column2.id} column={column2} poses={posesFromCol2} />
 				</div>
 			</DragDropContext>
 		</div>
