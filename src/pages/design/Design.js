@@ -138,7 +138,20 @@ function Design() {
 
 		setState(newState);
 	};
+	// handleCLick to fix Search bar
+	const handleClick = e => {
+		const initialPoses = asanaData.map(item => item.id);
+		const newState = {
+			...state,
+			columns: {
+				...state.columns,
+				'column-1': { id: 'column-1', posesIds: initialPoses },
+			},
+		}
+		setState(newState)
+	}
 
+	
 	const column1 = state.columns['column-1'];
 	const posesFromCol1 = column1.posesIds.map(poseIds => data.filter(item => item.id === poseIds)[0]);
 
@@ -150,7 +163,7 @@ function Design() {
 			{/*************************************** row 1 *****************************/}
 			{/* SEARCH */}
 			<div className='row'>
-				<div className='col'>
+				<div className='col' onClick={handleClick}>
 					<form className='search-form' onSubmit={handleSubmit}>
 						<input type='text' placeholder='Search' value={searchedWord} onChange={e => setSearchedWord(e.target.value)} />
 						<button type='submit'>Search</button>
