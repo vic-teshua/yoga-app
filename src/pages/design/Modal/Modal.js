@@ -19,11 +19,16 @@ export function Modal({ children, fade = false, defaultOpened = false }, ref) {
   }, [close])
 
   useEffect(() => {
-    if (isOpen) document.addEventListener('keydown', handleEscape, false)
-    return () => {
-      document.removeEventListener('keydown', handleEscape, false)
+    if (isOpen) {
+        document.addEventListener('keydown', handleEscape, false)
+        document.addEventListener('click', close, false)
     }
-  }, [handleEscape, isOpen])
+    return () => {
+        document.removeEventListener('keydown', handleEscape, false)
+        document.removeEventListener('click', close, false)
+       
+    }
+  }, [handleEscape, close, isOpen])
 
   return createPortal(
     isOpen ? (

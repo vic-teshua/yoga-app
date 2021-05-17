@@ -7,6 +7,7 @@ function AsanaCard(props) {
   const { index, id, nameTranslated, image, difficultyLevel, category, description, benefits } = props;
   const modal = useRef(null);
 
+
   return (
     <Draggable draggableId={id} index={index}>
       {(provided) => (
@@ -46,7 +47,7 @@ function AsanaCard(props) {
             alt="..."
             width="100%"
             height="40%"
-			objectFit="cover"
+			
           />
 		  <div className="card-body">
 		  <p className="card-text">{category}
