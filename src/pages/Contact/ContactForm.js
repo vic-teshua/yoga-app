@@ -1,7 +1,15 @@
 import React from "react";
 import "./style.css";
 
-import { Form, Button, Container, Col, Row, Image } from "react-bootstrap";
+import {
+  Form,
+  Button,
+  Container,
+  Col,
+  Row,
+  Image,
+  Badge,
+} from "react-bootstrap";
 
 function App() {
   return (
@@ -15,6 +23,11 @@ function App() {
             </Col>
             <Col></Col>
           </Row>
+        </Container>
+        <Container>
+          <h1>
+            Contact Us <Badge variant="secondary"></Badge>
+          </h1>
         </Container>
         <Container>
           <Row>
@@ -65,7 +78,29 @@ function App() {
                 <Button type="submit">Submit</Button>
               </Form>
             </Col>
-            <Col lg={6}>Additional Text goes here</Col>
+            <Col lg={6}>
+              Have questions about our services?
+              <Row>
+                <p>
+                  Have questions about Yoga? Our entire team receives
+                  specialized training regularly to ensure you're receiving the
+                  best information possible. From basic questions to complex
+                  compliance inquiries, we're here to help! Interested in
+                  learning more about our services? Our Account Executives take
+                  the time to discuss your existing background screening program
+                  and help you make smart decisions that best meet your needs.
+                  complex compliance inquiries, we're here to help! Interested
+                  in learning more about our services? Our Account Executives
+                  take the time to discuss your existing background screening
+                  program and help you make smart decisions that best meet your
+                  needs. the time to discuss your existing background screening
+                  program and help you make smart decisions that best meet your
+                  needs. Interested in learning more about our services? Our
+                  Account Executives take Interested in learning more about our
+                  services? Our Account Executives take
+                </p>
+              </Row>
+            </Col>
           </Row>
         </Container>
       </header>
