@@ -8,14 +8,17 @@
 
 
 }
-.nav li {
+.nav a {
     text-decoration: none;
     list-style-type: none;
     padding: 0 15px;
 }
+.nav a:focus {
+    color: black;
+}
 
 .nav li::after{
-    content: '/';
-    padding-left:23px;
+    content: '|';
+    padding-right:2px;
     font-size: 20px;
 }

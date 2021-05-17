@@ -5,7 +5,8 @@ video {
     left:50%;
     transform:translateX(-50%);
     width: 600px;
-    height: 600px
+    height: 600px;
+    z-index: -1;
 }
 
 .intro {
@@ -24,4 +25,17 @@ video {
     width:100px;
     transform:translateX(-50%);
     border-radius: 15%;
+}
+
+
+
+@media screen and (max-width: 522px) {
+
+    
+    .button {
+       
+        top: 75%;
+       
+    }
+    
 }
