@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import { Form, Button, Container, Col, Row, Image } from "react-bootstrap";
 
 function App() {
