@@ -7,12 +7,10 @@ body {
 .aboutUsSection {
     display: flex;
     justify-content: center;
-    background-color: green;
     align-items: center;
-}
-.aboutUsSection p {
-    width: 30%;
-    padding: 3rem;
+    flex-wrap: wrap;
+    /* gap: 4rem; */
+    padding: 4rem;
 }
 
 .historySection {
@@ -35,11 +33,4 @@ body {
     width: 17rem;
     height: 17rem;
     object-fit: cover;
-}
-
-.howToSection {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 1.5rem;
 }
