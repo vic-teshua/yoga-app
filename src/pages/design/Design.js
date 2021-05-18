@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Design.css';
 import { DragDropContext } from 'react-beautiful-dnd';
 
@@ -147,17 +147,29 @@ function Design() {
 				...state.columns,
 				'column-1': { id: 'column-1', posesIds: initialPoses },
 			},
-		}
-		setState(newState)
-	}
+		};
+		setState(newState);
+	};
 
-	
 	const column1 = state.columns['column-1'];
 	const posesFromCol1 = column1.posesIds.map(poseIds => data.filter(item => item.id === poseIds)[0]);
 
 	const column2 = state.columns['column-2'];
 	const posesFromCol2 = column2.posesIds.map(poseIds => data.filter(item => item.id === poseIds)[0]);
 
+	//LOGIN
+
+	useEffect(() => {
+		const token = localStorage.getItem('token');
+		if (!token) {
+			window.location.replace('/login');
+		}
+	}, []);
+
+	const logout = () => {
+		localStorage.removeItem('token');
+		window.location.reload();
+	};
 	return (
 		<div className='container-fluid'>
 			{/*************************************** row 1 *****************************/}
@@ -180,6 +192,9 @@ function Design() {
 					<button type='reset' onClick={handleReset}>
 						Remove Cards
 					</button>
+
+					{/* LOGOUT */}
+					<button onClick={logout}>Logout</button>
 				</div>
 			</div>
 
