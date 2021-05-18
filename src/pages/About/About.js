@@ -105,19 +105,19 @@ function About() {
                 </div>
             </section>
 
-            <section className="container-fluid mt-4">
+            <section className="container-fluid mt-4 howToSection">
                 <h2 className="text-center p-3">How to use the app</h2>
                 <div>
                     <HowToList />
                 </div>
 
-                <div className="row">
+                {/* <div className="row">
                     <div className="col text-center p-1 mb-5 ">
                         <button className="btn btn-primary p-3 ">
                             <Link to="/design"> Use the App</Link>
                         </button>
                     </div>
-                </div>
+                </div> */}
             </section>
             <Footer />
         </div>
