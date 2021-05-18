@@ -7,6 +7,7 @@ import About from './pages/About/About';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Navigation from './pages/Home/components/Navigation/Navigation';
 import Login from './pages/login/Login';
+import Footer from './pages/Home/components/Footer/Footer'
 function App() {
 	return (
 		<Router>
@@ -28,6 +29,7 @@ function App() {
 					<Login />
 				</Route>
 			</Switch>
+			<Footer />
 		</Router>
 	);
 }

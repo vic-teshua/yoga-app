@@ -11,9 +11,13 @@
     list-style-type: none;
     padding: 0 15px;
     font-size: 1.5rem;
+    color: #4c411a;
+}
+.nav a:hover {
+    color: #361a4c;
 }
 .nav a:focus {
-    color: black;
+    color: #83aa8d;
 }
 
 .nav li::after{

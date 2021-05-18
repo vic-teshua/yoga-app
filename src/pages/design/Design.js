@@ -4,7 +4,7 @@ import { DragDropContext } from 'react-beautiful-dnd';
 
 // components
 import Column from './column/Column';
-import Footer from './components/Footer'
+
 // data
 import asanaData from '../../data/data';
 import columnsData from '../../data/columnsData';
@@ -206,7 +206,7 @@ function Design() {
 					<Column key={column2.id} column={column2} poses={posesFromCol2} />
 				</div>
 			</DragDropContext>
-			<Footer />
+		
 		</div>
 	);
 }

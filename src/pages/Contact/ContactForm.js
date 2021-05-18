@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import Footer from '../../components/Footer/Footer'
+
 import {
   Form,
   Button,
@@ -109,7 +109,7 @@ function App() {
           </Row>
         </Container>
       </header>
-      <Footer />
+   
     </div>
   );
 }

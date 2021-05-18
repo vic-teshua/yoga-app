@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom"
 import "./About.css";
 import HowToList from "./components/HowToList";
-import Footer from '../../components/Footer/Footer'
+
 
 function About() {
     return (
@@ -121,7 +121,7 @@ function About() {
                     </div>
                 </div>
             </section>
-            <Footer />
+           
         </div>
     );
 }
