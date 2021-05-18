@@ -1,112 +1,86 @@
-import React from "react";
-import "./style.css";
-import Footer from '../../components/Footer/Footer'
-import {
-  Form,
-  Button,
-  Container,
-  Col,
-  Row,
-  Image,
-  Badge,
-} from "react-bootstrap";
+import React from 'react';
+import './ContactForm.css';
+import Footer from '../../components/Footer/Footer';
+import { Form, Button, Container, Col, Row, Image, Badge } from 'react-bootstrap';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Container>
-          <Row>
-            <Col></Col>
-            <Col lg={6}>
-              <Image src="Viktoria's Yoga Club.png" rounded />
-            </Col>
-            <Col></Col>
-          </Row>
-        </Container>
-        <Container>
-          <h1>
-            Contact Us <Badge variant="secondary"></Badge>
-          </h1>
-        </Container>
-        <Container>
-          <Row>
-            <Col lg={6}>
-              <Form>
-                <Row>
-                  <Col lg={6}>
-                    <Form.Group controlId="formBasicFirstName">
-                      <Form.Label>First Name</Form.Label>
-                      <Form.Control required size="lg" type="text" />
-                    </Form.Group>
-                  </Col>
+	return (
+		<div className='App'>
+			<header className='App-header'>
+				<Container>
+					<Row>
+						<Col lg={6} className='contact-form-img-container'>
+							<Image className='contact-form-img' src="Viktoria's Yoga Club.png" rounded />
+						</Col>
+					</Row>
+				</Container>
+				<Container className='contact-form-container'>
+					<h1>
+						Contact Us <Badge variant='secondary'></Badge>
+					</h1>
+					<Container>
+						<Row>
+							<Col lg={6}>
+								<Form className='contact-form'>
+									<Row>
+										<Col lg={6}>
+											<Form.Group className='input' controlId='formBasicFirstName'>
+												{/* <Form.Label>First Name</Form.Label> */}
+												<Form.Control required size='lg' type='text' placeholder='First Name' />
+											</Form.Group>
+										</Col>
 
-                  <Col lg={6}>
-                    <Form.Group controlId="formBasicLastName">
-                      <Form.Label>Last Name</Form.Label>
-                      <Form.Control required size="lg" type="text" />
-                    </Form.Group>
-                  </Col>
-                </Row>
+										<Col lg={6}>
+											<Form.Group className='input' controlId='formBasicLastName'>
+												{/* <Form.Label>Last Name</Form.Label> */}
+												<Form.Control required size='lg' type='text' placeholder='Last Name' />
+											</Form.Group>
+										</Col>
+									</Row>
 
-                <Form.Group controlId="formEmail">
-                  <Form.Label>Email Adress</Form.Label>
-                  <Form.Control
-                    required
-                    type="email"
-                    placeholder="Example@email.com"
-                  />
-                  <Form.Text className="text-muted">
-                    We'll never share your email address, trust us!
-                  </Form.Text>
-                </Form.Group>
+									<Form.Group className='input' controlId='formEmail'>
+										{/* <Form.Label>Email Address</Form.Label> */}
+										<Form.Control required type='email' placeholder='Your Email' />
+									</Form.Group>
 
-                <Form.Group controlId="formBasicPhone">
-                  <Form.Label>Phone Number (optional)</Form.Label>
-                  <Form.Control type="text" />
-                </Form.Group>
+									<Form.Group className='input' controlId='formBasicPhone'>
+										{/* <Form.Label>Phone Number (optional)</Form.Label> */}
+										<Form.Control type='text' placeholder='Phone Number (optional)' />
+									</Form.Group>
 
-                <Form.Group controlId="formBasicWhatAreYouLookingForr">
-                  <Form.Label>How can we help you online?</Form.Label>
-                  <Form.Control
-                    required
-                    as="textarea"
-                    rows="3"
-                    placeholder="What do you do?"
-                  />
-                </Form.Group>
-                <Button type="submit">Submit</Button>
-              </Form>
-            </Col>
-            <Col lg={6}>
-              Have questions about our services?
-              <Row>
-                <p>
-                  Have questions about Yoga? Our entire team receives
-                  specialized training regularly to ensure you're receiving the
-                  best information possible. From basic questions to complex
-                  compliance inquiries, we're here to help! Interested in
-                  learning more about our services? Our Account Executives take
-                  the time to discuss your existing background screening program
-                  and help you make smart decisions that best meet your needs.
-                  complex compliance inquiries, we're here to help! Interested
-                  in learning more about our services? Our Account Executives
-                  take the time to discuss your existing background screening
-                  program and help you make smart decisions that best meet your
-                  needs. the time to discuss your existing background screening
-                  program and help you make smart decisions that best meet your
-                  needs. Interested in learning more about our services? Our
-                  Account Executives take Interested in learning more about our
-                  services? Our Account Executives take
-                </p>
-              </Row>
-            </Col>
-          </Row>
-        </Container>
-      </header>
-      <Footer />
-    </div>
-  );
+									<Form.Group className='input' style={{ marginBottom: 0 }} controlId='formBasicWhatAreYouLookingForr'>
+										{/* <Form.Label>How can we help you online?</Form.Label> */}
+										<Form.Control required as='textarea' rows='3' placeholder='How can we help you online?' />
+									</Form.Group>
+
+									<Form.Text className='text-muted' style={{ display: 'block', marginBottom: '20px' }}>
+										We'll never share your email address, trust us!
+									</Form.Text>
+									<Button className='contact-form-button' type='submit'>
+										Submit
+									</Button>
+								</Form>
+							</Col>
+							<Col lg={6} className='contact-form-text-container'>
+								<h4>Have questions about our services?</h4>
+								<Row>
+									<p>
+										From basic questions to complex compliance inquiries, we're here to help! Interested in learning more about our services? Our Account
+										Executives take the time to discuss your existing background screening program and help you make smart decisions that best meet your needs.
+									</p>
+									<p>
+										The time to discuss your existing background screening program and help you make smart decisions that best meet your needs. Interested in
+										learning more about our services? Our Account Executives take Interested in learning more about our services? Our Account Executives take
+									</p>
+								</Row>
+							</Col>
+						</Row>
+					</Container>
+				</Container>
+			</header>
+			<Footer />
+		</div>
+	);
 }
 
 export default App;
