@@ -108,15 +108,6 @@ function About() {
                 </div>
             </section>
 
-            {/* <section>
-                <h3>History behind the health</h3>
-                <div className="historySection">
-                    <History />
-                    <History />
-                    <History />
-                </div>
-            </section> */}
-
             <section className="container-fluid">
                 <h3 className="text-center">How to use the app</h3>
                 <div>
