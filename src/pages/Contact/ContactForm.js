@@ -25,7 +25,7 @@ function App() {
           </Row>
         </Container>
         <Container>
-          <h1>
+          <h1 className="contact">
             Contact Us <Badge variant="secondary"></Badge>
           </h1>
         </Container>
@@ -75,16 +75,19 @@ function App() {
                     placeholder="What do you do?"
                   />
                 </Form.Group>
-                <Button type="submit">Submit</Button>
+                <Button className="button-1" type="submit">
+                  Submit
+                </Button>
               </Form>
             </Col>
             <Col lg={6}>
               Have questions about our services?
               <Row>
                 <p>
-                  Have questions about Yoga? Our entire team receives
-                  specialized training regularly to ensure you're receiving the
-                  best information possible. From basic questions to complex
+                  Have questions about class availability, tech issues or
+                  general information. ? Our entire team receives specialized
+                  training regularly to ensure you're receiving the best
+                  information possible. From basic questions to complex
                   compliance inquiries, we're here to help! Interested in
                   learning more about our services? Our Account Executives take
                   the time to discuss your existing background screening program
@@ -97,7 +100,9 @@ function App() {
                   program and help you make smart decisions that best meet your
                   needs. Interested in learning more about our services? Our
                   Account Executives take Interested in learning more about our
-                  services? Our Account Executives take
+                  services? needs. Interested in learning more about our
+                  services? Our Account Executives take Interested in learning
+                  more about our services. We're here to help!
                 </p>
               </Row>
             </Col>
