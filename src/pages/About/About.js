@@ -1,5 +1,5 @@
 import React from "react";
-import History from "./components/History";
+import {Link} from "react-router-dom"
 import "./About.css";
 import HowToList from "./components/HowToList";
 
@@ -116,7 +116,7 @@ function About() {
 
                 <div className="row">
                     <div className="col text-center p-1 mb-5 ">
-                        <button className="btn btn-primary p-3 ">Use the App</button>
+                        <button className="btn btn-primary p-3 "><Link to= '/design'> Use the App</Link></button>
                     </div>
                 </div>
             </section>
