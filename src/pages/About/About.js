@@ -1,19 +1,16 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 import "./About.css";
 import HowToList from "./components/HowToList";
-
 
 function About() {
     return (
         <div>
             <section className="aboutUsSection ">
-                <hr className="featurette-divider" />
-
                 <div className="row featurette">
-                    <div className="col-md-6">
+                    <div className="col-md-6 align-self-center">
                         <h2 className="featurette-heading">Yoga - strike the pose!</h2>
-                        <p className="lead">
+                        <p>
                             In a world of hundreds of objects, thousands of tasks and uncountable things needing your attention… <br />
                             You need just one thing - Yoga!
                             <br />
@@ -42,9 +39,7 @@ function About() {
 
             {/* HISTORY SECTION */}
 
-            <section className="aboutUsSection ">
-                <hr className="featurette-divider" />
-
+            <section className="aboutUsSection historySection ">
                 <div className="row featurette d-flex ">
                     <div className="col-md-6">
                         <div className="col-md-6 d-flex flex-row">
@@ -92,9 +87,9 @@ function About() {
                             />
                         </div>
                     </div>
-                    <div className="col-md-6">
-                        <h2 className="featurette-heading">Where we’re coming from.</h2>
-                        <p className="lead">
+                    <div className="col-md-6 align-self-center ps-5">
+                        <h2 className="featurette-heading">...where we’re coming from</h2>
+                        <p>
                             We love Yoga!
                             <br />
                             It relieves stress, is a great work out and brightens our daily life.
@@ -109,15 +104,17 @@ function About() {
                 </div>
             </section>
 
-            <section className="container-fluid">
-                <h3 className="text-center">How to use the app</h3>
+            <section className="container-fluid mt-4">
+                <h2 className="text-center p-3">How to use the app</h2>
                 <div>
                     <HowToList />
                 </div>
 
                 <div className="row">
                     <div className="col text-center p-1 mb-5 ">
-                        <button className="btn btn-primary p-3 "><Link to= '/design'> Use the App</Link></button>
+                        <button className="btn btn-primary p-3 ">
+                            <Link to="/design"> Use the App</Link>
+                        </button>
                     </div>
                 </div>
             </section>
