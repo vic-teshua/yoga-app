@@ -5,7 +5,7 @@ const Users = [
 	},
 
 	{
-		email: 'igor@gmail.com',
+		email: 'boruchigor@gmail.com',
 		password: 'igor',
 	},
 
