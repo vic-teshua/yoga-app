@@ -1,5 +1,4 @@
 import React from "react";
-import History from "./components/History";
 import "./About.css";
 import HowToList from "./components/HowToList";
 
