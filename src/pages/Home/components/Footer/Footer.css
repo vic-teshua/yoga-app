@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 .footer{
     position: absolute;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    font-family: 'Lobster', cursive;
+   
 
 }
 
