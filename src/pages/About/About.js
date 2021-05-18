@@ -112,8 +112,8 @@ function About() {
 
                 <div className="row">
                     <div className="col text-center p-1 mb-5 ">
-                        <button className="btn btn-primary p-3 ">
-                            <Link to="/design"> Use the App</Link>
+                        <button className="p-3 btn4">
+                            <Link to="/design">Use the App</Link>
                         </button>
                     </div>
                 </div>
