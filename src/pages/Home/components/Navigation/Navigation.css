@@ -1,6 +1,7 @@
 .nav {
     display: flex;
     justify-content: flex-end;
+    padding-right: 70px;
   
 
 
@@ -9,12 +10,19 @@
     text-decoration: none;
     list-style-type: none;
     padding: 0 15px;
+    font-size: 1.5rem;
 }
 .nav a:focus {
     color: black;
 }
 
 .nav li::after{
+    content: '|';
+    padding-right:2px;
+    font-size: 20px;
+}
+
+.nav li:nth-of-type(1)::before {
     content: '|';
     padding-right:2px;
     font-size: 20px;

@@ -2,7 +2,7 @@ import React from 'react'
 import './Footer.css'
 const Footer = () => {
     return (
-        <div className="footer">
+        <div className="footermain">
             <h2> Created by <br></br> Project-XxX Team</h2>
             <h3>Connect:<br></br> <a href="https://twitter.com" target='_blank' rel="noreferrer">
             <i class="fab fa-twitter-square"></i>
