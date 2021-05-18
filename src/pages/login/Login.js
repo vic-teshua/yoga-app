@@ -72,29 +72,22 @@ function Login() {
 
 	return (
 		<div className='text-center'>
-			<main className='form-signin'>
+			<main className='form-login'>
 				<form>
 					<img className='mb-4' src='https://cdn.iconscout.com/icon/free/png-256/user-1648810-1401302.png' alt='' width='72' height='57' />
-					<h1 className='h3 mb-3 fw-normal'>Please sign in</h1>
+					<h1 className='h3 mb-3'>Please sign in</h1>
 
 					<div className='form-floating'>
-						<input
-							onChange={onEmailHandler}
-							onBlur={onCheckEmailHandler}
-							type='email'
-							className='form-control'
-							id='floatingInput'
-							placeholder='name@example.com'
-						/>
-						<label htmlFor='floatingInput'>Email address</label>
+						<input onChange={onEmailHandler} onBlur={onCheckEmailHandler} type='email' className='form-control' id='email' placeholder='name@example.com' />
+						<label htmlFor='email'>Email address</label>
 					</div>
-					<div className='form-floating Password'>
+					<div className='form-floating'>
 						<input
 							onChange={onPasswordHandler}
 							onBlur={onPasswordCheckHandler}
 							type={isVisible ? 'text' : 'password'}
 							className='form-control'
-							id='floatingPassword'
+							id='password'
 							placeholder='Password'
 						/>
 
@@ -102,7 +95,7 @@ function Login() {
 							<i className='far fa-eye' onClick={() => setIsVisible(!isVisible)}></i>
 						</span>
 
-						<label htmlFor='floatingPassword'>Password</label>
+						<label htmlFor='password'>Password</label>
 					</div>
 
 					<button onClick={onSignHandler} className='w-100 btn btn-lg btn-primary' type='button'>
