@@ -72,7 +72,7 @@ function Login() {
 	};
 
 	return (
-		<div className='text-center'>
+		<div className='text-center fix'>
 			<main className='form-login'>
 				<form>
 				<i class="fas fa-sign-in-alt fa-2x"></i>

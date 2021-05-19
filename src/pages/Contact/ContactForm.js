@@ -70,7 +70,7 @@ function App() {
 									</p>
 									<p>
 										The time to discuss your existing background screening program and help you make smart decisions that best meet your needs. Interested in
-										learning more about our services? Our Account Executives take Interested in learning more about our services? Our Account Executives take
+										learning more about our services? Our Account Executives take Interested in learning more about our services? 	
 									</p>
 								</Row>
 							</Col>
