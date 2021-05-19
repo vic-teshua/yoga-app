@@ -7,7 +7,7 @@ const Logo = () => {
         <div className="containers">
         <img src={logo} alt='Logo' className='logo'/>
         <h3 className="intro">Design Your Daily Yoga Practice</h3>
-        <Link to='/design'>
+        <Link to='/login'>
         <button className="btn btn2"><span class="noselect">Start Now </span>
         </button>
         </Link>
