@@ -29,6 +29,8 @@
 }
 .text-center {
   position: relative;
+  min-height: 60vh;
+  margin-top:10%
 }
 
 .form-login {
