@@ -1,13 +1,39 @@
 .form-login {
-	width: 100%;
-	max-width: 330px;
-	padding: 15px;
-	margin: auto;
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
 }
 
 .ShowPassword {
-	position: absolute;
-	top: 50%;
-	right: 5%;
-	transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+}
+
+.w-100 {
+  width: 100%;
+  background-color: #4c411a;
+  /* border-color: #4c411a; */
+  border: none;
+  text-transform: uppercase;
+}
+
+.w-100:hover {
+  background-color: #2e2710;
+}
+
+.fas {
+  color: #2e3134;
+}
+.text-center {
+  position: relative;
+}
+
+.form-login {
+  background-color: #d3cdb7;
+  padding: 50px;
+  box-shadow: 2px 2px 4px #4c411a;
+  height: 50vh;
 }

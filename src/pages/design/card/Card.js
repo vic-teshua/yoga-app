@@ -4,6 +4,7 @@ import Modal from '../Modal/Modal';
 import { Draggable } from 'react-beautiful-dnd';
 
 function AsanaCard(props) {
+
 	const { index, id, nameTranslated, image, difficultyLevel, category, description, benefits } = props;
 	const modal = useRef(null);
 

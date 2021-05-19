@@ -32,6 +32,11 @@ p {
     box-shadow: 1px 1px 7px 1px rgba(206, 206, 206, 0.804);
 }
 
+
+.howToSection {
+    margin-bottom: 10rem;
+}
+
 .btn4 {
 	text-decoration: none;
     border: 1px solid rgb(146, 148, 248);
@@ -67,3 +72,4 @@ p {
       text-decoration: none;
       font-size: 2rem;
   }
+
