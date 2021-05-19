@@ -4,7 +4,7 @@ import { DragDropContext } from 'react-beautiful-dnd';
 
 // components
 import Column from './column/Column';
-import Footer from './components/Footer'
+
 // data
 import asanaData from '../../data/data';
 import columnsData from '../../data/columnsData';
@@ -178,23 +178,23 @@ function Design() {
 				<div className='col' onClick={handleClick}>
 					<form className='search-form' onSubmit={handleSubmit}>
 						<input type='text' placeholder='Search' value={searchedWord} onChange={e => setSearchedWord(e.target.value)} />
-						<button type='submit'>Search</button>
+						<button type='submit' className='btn3'>Search</button>
 					</form>
 				</div>
 
 				{/* PRINT */}
 				<div className='col'>
-					<button onClick={() => window.print()}>
+					<button onClick={() => window.print()} className='btn3'>
 						<i className='fas fa-print'></i> Print
 					</button>
 
 					{/* RESET */}
-					<button type='reset' onClick={handleReset}>
+					<button type='reset' onClick={handleReset} className='btn3'>
 						Remove Cards
 					</button>
 
 					{/* LOGOUT */}
-					<button onClick={logout}>Logout</button>
+					<button onClick={logout} className='btn3'>Logout</button>
 				</div>
 			</div>
 
@@ -206,7 +206,7 @@ function Design() {
 					<Column key={column2.id} column={column2} poses={posesFromCol2} />
 				</div>
 			</DragDropContext>
-			<Footer />
+		
 		</div>
 	);
 }

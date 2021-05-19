@@ -1,11 +1,11 @@
-import React from 'react'
-import video1 from '../../../../videos/VicClub.mp4';
-import './Logo.css'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import './Logo.css';
+import {Link} from 'react-router-dom';
+import logo from '../Image/logo.png'
 const Logo = () => {
     return (
-        <div className="container">
-        <video autoPlay src={video1} type="video/mp4" muted></video>
+        <div className="containers">
+        <img src={logo} alt='Logo' className='logo'/>
         <h3 className="intro">Design Your Daily Yoga Practice</h3>
         <Link to='/design'>
         <button className="btn btn2"><span class="noselect">Start Now </span>

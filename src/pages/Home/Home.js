@@ -1,14 +1,17 @@
 import React from 'react'
+import './Home.css'
 
-import Footer from './components/Footer/Footer';
 import Logo from './components/Logo/Logo';
 const Home = () => {
     return (
-        <div>
-    
-        <Logo />
-        <Footer />
+        <>
+        <div className='wrap'>
         </div>
+        <div>
+        <Logo />
+       
+        </div>
+        </>
     )
 }
 
