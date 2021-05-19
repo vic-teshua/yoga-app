@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './Login.css';
 import Users from '../../data/users';
 
-
 function Login() {
 	const [isVisible, setIsVisible] = useState(false);
 	const [email, setEmail] = useState('');
@@ -75,7 +74,7 @@ function Login() {
 		<div className='text-center fix'>
 			<main className='form-login'>
 				<form>
-				<i class="fas fa-sign-in-alt fa-2x"></i>
+					<i class='fas fa-sign-in-alt fa-2x'></i>
 
 					<h1 className='h3 mb-3'>Please sign in</h1>
 
@@ -103,10 +102,8 @@ function Login() {
 					<button onClick={onSignHandler} className='w-100 btn btn-lg btn-primary' type='button'>
 						Sign in
 					</button>
-					<p className='mt-5 mb-3 text-muted'>&copy; 2021</p>
 				</form>
 			</main>
-			
 		</div>
 	);
 }
