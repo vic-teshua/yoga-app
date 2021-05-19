@@ -17,7 +17,7 @@ function About() {
                             <br /> But where do you start? Online, the library, a groovy guru?
                             <br />
                             <br /> We’d like to help! <br />
-                            XXX Yoga App, makes things simple with an easy to use drag and drop card system. <br />
+                            Viktoria's Yoga App, makes things simple with an easy to use drag and drop card system. <br />
                             <br />
                             Giving you control and letting you Yoga - without the stress.
                         </p>
@@ -95,7 +95,7 @@ function About() {
                             It relieves stress, is a great work out and brightens our daily life.
                             <br />
                             <br /> However not all of us have the time or space to do yoga in a meaningful way. <br />
-                            The answer to this, came from the creation of the XXX Yoga App.
+                            The answer to this, came from the creation of the Viktoria's Yoga App.
                             <br />
                             <br /> Our idea was to let people get inspired and decide on a routine that would be make yoga work for them, and fit into their
                             lives.
@@ -104,21 +104,21 @@ function About() {
                 </div>
             </section>
 
-            <section className="container-fluid mt-4">
+            <section className="container-fluid mt-4 howToSection">
                 <h2 className="text-center p-3">How to use the app</h2>
                 <div>
                     <HowToList />
                 </div>
 
-                <div className="row">
+                {/* <div className="row">
                     <div className="col text-center p-1 mb-5 ">
                         <button className="p-3 btn4">
                             <Link to="/design">Use the App</Link>
                         </button>
                     </div>
-                </div>
+                </div> */}
             </section>
-           
+
         </div>
     );
 }
