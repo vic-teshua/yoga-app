@@ -3,6 +3,7 @@ import { Droppable } from 'react-beautiful-dnd';
 import AsanaCard from '../card/Card';
 
 function Column(props) {
+	console.log(props);
 	return (
 		<Droppable droppableId={props.column.id} direction='horizontal'>
 			{(provided, snapshot) => {
@@ -14,9 +15,11 @@ function Column(props) {
 						ref={provided.innerRef}
 						{...provided.droppableProps}
 					>
-						{props.poses.map((pose, index) => (
-							<AsanaCard key={pose.id} {...pose} index={index} />
-						))}
+						{props.column.posesIds.length === 0 ? (
+							<p className='drop-here'>Drop here</p>
+						) : (
+							props.poses.map((pose, index) => <AsanaCard key={pose.id} {...pose} index={index} />)
+						)}
 						{provided.placeholder}
 					</div>
 				);

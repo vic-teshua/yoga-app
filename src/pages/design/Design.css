@@ -21,6 +21,13 @@
 	box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 1);
 }
 
+.drop-here {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: gray;
+	margin: 30% auto;
+}
+
 .btn-row {
 	/* border: solid red; */
 	margin-top: 10px;
