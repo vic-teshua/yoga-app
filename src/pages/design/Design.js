@@ -174,16 +174,18 @@ function Design() {
 		<div className='container-fluid'>
 			{/*************************************** row 1 *****************************/}
 			{/* SEARCH */}
-			<div className='row'>
-				<div className='col' onClick={handleClick}>
+			<div className='row btn-row'>
+				<div className='col-4' onClick={handleClick}>
 					<form className='search-form' onSubmit={handleSubmit}>
 						<input type='text' placeholder='Search' value={searchedWord} onChange={e => setSearchedWord(e.target.value)} />
-						<button type='submit' className='btn3'>Search</button>
+						{/* <button type='submit' className='btn3'>
+							Search
+						</button> */}
 					</form>
 				</div>
 
 				{/* PRINT */}
-				<div className='col'>
+				<div className='col-8 service-buttons-container'>
 					<button onClick={() => window.print()} className='btn3'>
 						<i className='fas fa-print'></i> Print
 					</button>
@@ -192,9 +194,6 @@ function Design() {
 					<button type='reset' onClick={handleReset} className='btn3'>
 						Remove Cards
 					</button>
-
-					{/* LOGOUT */}
-					<button onClick={logout} className='btn3'>Logout</button>
 				</div>
 			</div>
 
@@ -206,7 +205,13 @@ function Design() {
 					<Column key={column2.id} column={column2} poses={posesFromCol2} />
 				</div>
 			</DragDropContext>
-		
+
+			{/* LOGOUT */}
+			<div className='logout-container'>
+				<button onClick={logout} className='btn3'>
+					Logout
+				</button>
+			</div>
 		</div>
 	);
 }

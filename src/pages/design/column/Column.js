@@ -8,8 +8,9 @@ function Column(props) {
 			{(provided, snapshot) => {
 				return (
 					<div
-						className={props.column.id === 'column-2' ? 'col flex' : 'col flex leftColumn'}
-						style={snapshot.isDraggingOver ? { backgroundColor: 'wheat' } : { backgroundColor: 'inherit' }}
+						className={props.column.id === 'column-2' ? 'col-8 flexColumn rightColumn' : 'col-4 flexColumn leftColumn'}
+						// className={'col flex'}
+						style={snapshot.isDraggingOver ? { backgroundColor: '#d3cdb7' } : { backgroundColor: 'inherit' }}
 						ref={provided.innerRef}
 						{...provided.droppableProps}
 					>
