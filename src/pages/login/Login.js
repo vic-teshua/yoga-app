@@ -75,7 +75,8 @@ function Login() {
 		<div className='text-center'>
 			<main className='form-login'>
 				<form>
-					<img className='mb-4' src='https://cdn.iconscout.com/icon/free/png-256/user-1648810-1401302.png' alt='' width='72' height='57' />
+				<i class="fas fa-sign-in-alt fa-2x"></i>
+
 					<h1 className='h3 mb-3'>Please sign in</h1>
 
 					<div className='form-floating'>
