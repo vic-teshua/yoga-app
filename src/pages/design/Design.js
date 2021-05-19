@@ -209,7 +209,7 @@ function Design() {
 			{/* LOGOUT */}
 			<div className='logout-container'>
 				<button onClick={logout} className='btn3'>
-					Logout
+					<i class='fas fa-sign-out-alt'></i> Sign Out
 				</button>
 			</div>
 		</div>
